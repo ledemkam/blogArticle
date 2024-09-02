@@ -1,0 +1,15 @@
+services:
+  bloc-article:
+    image: mysql:9.0.1
+    container_name: bloc-article
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3309:3306
+  adminer:
+    image: adminer:4.8.0-standalone
+    container_name: adminer-4.8.0-standalone
+    restart: always
+    ports:
+      - 9081:8080
